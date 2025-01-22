@@ -115,7 +115,7 @@ class DragMarkerWidgetState extends State<DragMarkerWidget> {
     final bottom = marker.size.height - top;
 
     final pos = Point(pxPoint.x - map.pixelOrigin.toDoublePoint().x, pxPoint.y - map.pixelOrigin.toDoublePoint().y);
-    pixelPosition = Point(pos.x - right, pos.y - bottom);
+    pixelPosition = Point(pos.x - right + marker.offset.dx, pos.y - bottom + marker.offset.dy);
   }
 
   void _start(Offset localPosition) {
